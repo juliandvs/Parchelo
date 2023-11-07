@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:icon="@drawable/ic_home_24"/>
+    <item android:title="Gurdados"
+        android:icon="@drawable/ic_safe_24"/>
+    <item android:title="Crear"
+        android:icon="@drawable/ic_add_24"/>
+    <item android:title="Chat"
+        android:icon="@drawable/ic_chat_24"/>
+    <item android:title="Perfil"
+        android:icon="@drawable/ic_profile_24"/>
+</menu>

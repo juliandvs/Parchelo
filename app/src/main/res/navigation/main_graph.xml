@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/inicio">
+
+    <fragment
+        android:id="@+id/registro"
+        android:name="com.example.parchelo.Registro"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registro_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/inicio"
+        android:name="com.example.parchelo.Inicio"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicio_to_registro"
+            app:destination="@id/registro" />
+        <action
+            android:id="@+id/action_inicio_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.example.parchelo.menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_perfil"
+            app:destination="@id/perfil" />
+    </fragment>
+    <fragment
+        android:id="@+id/principal"
+        android:name="com.example.parchelo.Principal"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal" />
+    <fragment
+        android:id="@+id/guardados"
+        android:name="com.example.parchelo.guardados"
+        android:label="fragment_guardados"
+        tools:layout="@layout/fragment_guardados" />
+    <fragment
+        android:id="@+id/crear"
+        android:name="com.example.parchelo.Crear"
+        android:label="fragment_crear"
+        tools:layout="@layout/fragment_crear" />
+    <fragment
+        android:id="@+id/chat"
+        android:name="com.example.parchelo.chat"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/perfil"
+        android:name="com.example.parchelo.Perfil"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+</navigation>
