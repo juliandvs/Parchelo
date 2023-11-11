@@ -12,9 +12,7 @@ android {
     namespace = "com.example.parchelo"
     compileSdk = 34
 
-    buildFeatures{
-        viewBinding = true
-    }
+    buildFeatures{ viewBinding = true }
 
     defaultConfig {
         applicationId = "com.example.parchelo"
