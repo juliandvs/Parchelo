@@ -39,7 +39,11 @@
         android:id="@+id/principal"
         android:name="com.example.parchelo.Principal"
         android:label="fragment_principal"
-        tools:layout="@layout/fragment_principal" />
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_principal_to_evento"
+            app:destination="@id/evento" />
+    </fragment>
     <fragment
         android:id="@+id/guardados"
         android:name="com.example.parchelo.guardados"
@@ -60,4 +64,9 @@
         android:name="com.example.parchelo.Perfil"
         android:label="fragment_perfil"
         tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/evento"
+        android:name="com.example.parchelo.Evento"
+        android:label="fragment_evento"
+        tools:layout="@layout/fragment_evento" />
 </navigation>
