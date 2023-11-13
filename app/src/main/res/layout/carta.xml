@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/card2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/principal"
+    app:cardCornerRadius="15dp">
+
+    <RelativeLayout
+        android:id="@+id/content_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/titulo_evento"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Ciclovia Nocturna"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/fecha_evento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/titulo_evento"
+            android:text="13/05/23; 6:00 p.m."
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lugar_evento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fecha_evento"
+            android:layout_toEndOf="@id/titulo_evento"
+            android:text="Torre colpatria"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_below="@+id/lugar_evento"
+            android:layout_marginTop="5dp"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/cicla" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="3dp"
+            android:layout_below="@+id/img_evento"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_guardar" />
+
+    </RelativeLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>

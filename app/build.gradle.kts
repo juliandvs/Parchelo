@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-
     // Add the SafeArgs functionality to the project
     id("androidx.navigation.safeargs.kotlin") version "2.7.1"
     // Add KSP for Kotlin
@@ -56,6 +55,7 @@ dependencies {
     //Navigation Component
     implementation ("androidx.navigation:navigation-fragment-ktx:2.7.4")
     implementation ("androidx.navigation:navigation-ui-ktx:2.7.4")
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
 
     //Core Default
     implementation ("androidx.activity:activity-compose:1.8.0")
