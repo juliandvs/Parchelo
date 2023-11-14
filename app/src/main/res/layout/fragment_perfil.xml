@@ -6,112 +6,223 @@
     android:layout_height="match_parent"
     tools:context=".Perfil">
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/principal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgFotoPerfil"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:scaleType="centerCrop" />
+
+        <ImageButton
+            android:id="@+id/btnEditarFotoPerfil"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="-20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/imgFotoPerfil"
+            android:background="@drawable/boton_circular"
+            android:src="@android:drawable/ic_menu_edit" />
+
+        <TextView
+            android:id="@+id/txt_nombre_edad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgFotoPerfil"
+            android:layout_centerHorizontal="true"
+            android:text="Nombre, edad"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/principal">
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imgFotoPerfil"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="160dp"
-            android:layout_marginTop="72dp"
-            />
-
-        <ImageButton
-            android:id="@+id/btnEditarFotoPerfil"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="120dp"
-            android:background="@drawable/boton_circular"
-            android:src="@android:drawable/ic_menu_edit"
-            />
+        <ImageView
+            android:id="@+id/person"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_person" />
 
         <TextView
-            android:textColor="@color/white"
-            android:id="@+id/txt_nombre_edad"
+            android:id="@+id/txt_sexo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="43dp"
-            android:text="Nombre, edad"
-            />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/person"
+            android:text="Hombre"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/img_location"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/txt_sexo"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_location" />
 
+        <TextView
+            android:id="@+id/txt_ubicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_sexo"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/person"
+            android:text="Bogota"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txt_sexo"
-        android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/img_rol"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/txt_ubicacion"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_work" />
+
+        <TextView
+            android:id="@+id/txt_rol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_ubicacion"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/person"
+            android:text="Estudiante"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout6"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="274dp"
-        android:text="Sexo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
 
-    <TextView
-        android:id="@+id/txt_ubicacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="14dp"
-        android:text="Ubicación"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_sexo" />
+        <TextView
+            android:id="@+id/txt_SobreMi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Sobre mi"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txt_rol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="15dp"
-        android:text="Rol"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_ubicacion" />
+        <TextView
+            android:id="@+id/txt_descripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_below="@+id/txt_SobreMi"
+            android:layout_marginStart="20dp"
+            android:text="Soy una persona sociable, alegre y carismatica, me gustan los chistes negros, las mujeres y el alcohol, no obstante, soy buen ciclista, me gusta correr y al finalizar tomarme mis polas"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/txt_SobreMi"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="31dp"
-        android:text="Sobre mi"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_rol" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout6">
 
-    <TextView
-        android:id="@+id/txt_descripcion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="20dp"
-        android:text="descripción"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_SobreMi" />
+        <TextView
+            android:id="@+id/txt_Interes"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intereses"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txt_Interes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="82dp"
-        android:text="Intereses"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_descripcion" />
+        <TextView
+            android:id="@+id/txt_intereses"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_below="@+id/txt_Interes"
+            android:layout_marginTop="10dp"
+            android:text="Gym"
+            android:background="@drawable/boton_circular_margen"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
 
-    <TextView
-        android:id="@+id/txt_intereses"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="20dp"
-        android:text="Intereses del usuario"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_Interes" />
+        <TextView
+            android:id="@+id/txt_intereses2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/txt_intereses"
+            android:layout_marginStart="40dp"
+            android:layout_below="@+id/txt_Interes"
+            android:layout_marginTop="10dp"
+            android:text="Futbol"
+            android:background="@drawable/boton_circular_margen"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txt_intereses3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/txt_intereses2"
+            android:layout_marginStart="40dp"
+            android:layout_below="@+id/txt_Interes"
+            android:layout_marginTop="10dp"
+            android:text="Futbol"
+            android:background="@drawable/boton_circular_margen"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txt_intereses4"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_intereses2"
+            android:layout_marginTop="10dp"
+            android:text="Fiesta"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/boton_circular_margen"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
