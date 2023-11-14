@@ -61,6 +61,7 @@ class Registro : Fragment() {
             lifecycleScope.launch {
                 val nombre = binding.textInputLayout.editText?.text.toString().trim()
                 val apellido = binding.textInputLayout3.editText?.text.toString().trim()
+                val edad = binding.txtEdad.editText?.text.toString().trim()
                 val nombreUsuario = binding.textInputLayout4.editText?.text.toString().trim()
                 val email = binding.textInputLayout5.editText?.text.toString().trim()
                 val contrasena = binding.textInputLayout6.editText?.text.toString().trim()
@@ -68,17 +69,19 @@ class Registro : Fragment() {
 
                 if(nombre.isEmpty() || apellido.isEmpty() || nombreUsuario.isEmpty() ||
                     email.isEmpty() || contrasena.isEmpty() || contrasenaValidacion.isEmpty()){ //Se verifica que todos los campos esten completos
-                                                                                                //TODO poner asteriscos a todos los campos o los que sean obligatorios
-                    Toast.makeText(requireContext(), "Por favor, llene todos los campos", Toast.LENGTH_SHORT).show()
+                    //TODO poner asteriscos a todos los campos o los que sean obligatorios
+                    Toast.makeText(requireContext(), "Por favor llene todos los campos", Toast.LENGTH_SHORT).show()
                 }else if(UsuarioDao.verificarUsuario(nombreUsuario)) { //Se verifica que el usuario no exista en la base de datos
                     Toast.makeText(requireContext(), "El nombre de usuario ya esta en uso", Toast.LENGTH_SHORT).show()
                 }else if(contrasena != contrasenaValidacion) { //Se verifica que la contraseña y la contraseña de validacion sean la misma
                     Toast.makeText(requireContext(), "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
-                }else if(UsuarioDao.verificarEmail(email)){ //Se verifica que el email no este en uso
+                }else if(UsuarioDao.verificarEmail(email)) { //Se verifica que el email no este en uso
                     Toast.makeText(requireContext(), "El email ya esta en uso", Toast.LENGTH_SHORT).show()
+                }else if(edad.isEmpty() || edad.toInt() < 18){//Se verifica que el usuario sea mayor de edad
+                    Toast.makeText(requireContext(), "Debes ser mayor de edad", Toast.LENGTH_SHORT).show()
                 }else{
                     //Se agrega el usuario a la base de datos :)
-                    val usuarioNuevo = Usuario(0, nombre, apellido, nombreUsuario, email, contrasena)
+                    val usuarioNuevo = Usuario(0, nombre, apellido,edad, nombreUsuario, email, contrasena)
                     UsuarioDao.insertarUsuario(usuarioNuevo)
                     Toast.makeText(requireContext(), "Usuario Registrado", Toast.LENGTH_SHORT).show()
                     limpiarCampos()
@@ -98,5 +101,6 @@ class Registro : Fragment() {
         binding.textInputLayout5.editText?.text?.clear()
         binding.textInputLayout6.editText?.text?.clear()
         binding.textInputLayout7.editText?.text?.clear()
+        binding.txtEdad.editText?.text?.clear()
     }
 }
