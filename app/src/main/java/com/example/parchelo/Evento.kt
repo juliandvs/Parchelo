@@ -27,7 +27,7 @@ class Evento : Fragment() {
         bar.isGone = true
         binding.tituloEventoDetalles.setText(args.Titulo)
         binding.fechaEventoDetalles.setText(args.Fecha)
-        binding.tituloEventoDetalles.setText(args.Lugar)
+        binding.lugarEventoDetalles.setText(args.Lugar)
         return root
     }
 
