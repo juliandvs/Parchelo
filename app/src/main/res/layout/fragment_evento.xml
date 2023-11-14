@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/principal"
+    android:background="#31BCB3"
     tools:context=".Evento">
 
     <ScrollView
@@ -26,16 +26,17 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <RelativeLayout
+                    android:layout_margin="10sp"
                     android:id="@+id/relativeLayout"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    android:background="@color/principal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/titulo_evento_detalles"
+                        android:layout_margin="8sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -55,6 +56,7 @@
 
                         <TextView
                             android:id="@+id/fecha_evento_detalles"
+                            android:layout_margin="8sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="13/05/23; 6:00 p.m."
@@ -63,6 +65,8 @@
                             android:textSize="20sp" />
 
                         <TextView
+                            android:id="@+id/lugar_evento_detalles"
+                            android:layout_margin="8sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
@@ -177,6 +181,7 @@
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
+                        android:padding="8dp"
                         android:id="@+id/descripcion_evento"
                         android:layout_width="378dp"
                         android:layout_height="149dp"
@@ -184,12 +189,14 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="20dp"
                         android:text="Llegaremos a la hora estipulada a la Torre Colpatria, tendremos algunos minutos para conocernos, luego tomaremos toda la septima hasta Girardot y de ahi nos quedamos 5 dias en Pereira, lavamos las bicis y nos devolvemos en bus a Bogota."
+                        android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="18dp" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/relativeLayout2"
+                    android:background="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -204,7 +211,7 @@
                         android:layout_marginTop="20dp"
                         android:text="integrantes"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="20dp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -282,8 +289,8 @@
                         android:layout_marginTop="30dp"
                         android:text="Enviar solisitud"
                         android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:backgroundTint="@color/white"
+                        android:textColor="@color/white"
+                        android:backgroundTint="#31BCB3"
                         android:layout_below="@+id/integrante1"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -294,7 +301,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/btn_enviar_solicitud"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="80dp"
+                        android:layout_marginTop="30dp"
                         android:text=""
                         android:textSize="18dp" />
 
@@ -305,8 +312,5 @@
             </LinearLayout>
         </ScrollView>
     </ScrollView>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 

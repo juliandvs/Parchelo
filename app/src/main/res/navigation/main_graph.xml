@@ -132,5 +132,15 @@
         android:id="@+id/evento"
         android:name="com.example.parchelo.Evento"
         android:label="fragment_evento"
-        tools:layout="@layout/fragment_evento" />
+        tools:layout="@layout/fragment_evento" >
+        <argument
+            android:name="Titulo"
+            app:argType="string" />
+        <argument
+            android:name="Fecha"
+            app:argType="string" />
+        <argument
+            android:name="Lugar"
+            app:argType="string" />
+    </fragment>
 </navigation>

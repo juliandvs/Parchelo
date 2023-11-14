@@ -1,14 +1,13 @@
 package com.example.parchelo
 
 import android.os.Bundle
+import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.parchelo.databinding.FragmentPrincipalBinding
 import com.example.parchelo.recycler.Evento
@@ -25,6 +24,7 @@ class Principal : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupBackPressListener()
     }
 
     override fun onCreateView(
@@ -72,8 +72,15 @@ class Principal : Fragment() {
     }
 
     fun onItemselected(evento: Evento){
-        findNavController().navigate(R.id.action_principal_to_evento)
-        Toast.makeText(requireContext(),evento.titulo,Toast.LENGTH_SHORT).show()
+        findNavController().navigate(PrincipalDirections.actionPrincipalToEvento(Titulo = evento.titulo, Fecha = evento.fecha, Lugar = evento.lugar))
+    }
+
+    private fun setupBackPressListener() {
+        this.view?.isFocusableInTouchMode = true
+        this.view?.requestFocus()
+        this.view?.setOnKeyListener { _, keyCode, _ ->
+            keyCode == KeyEvent.KEYCODE_BACK
+        }
     }
 
 
