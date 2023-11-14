@@ -52,7 +52,7 @@ class Perfil : Fragment() {
                     true
                 }
                 R.id.chatea -> {
-                    findNavController().navigate(R.id.action_perfil_to_guardados)
+                    findNavController().navigate(R.id.action_perfil_to_chat)
                     true
                 }
                 R.id.perfil_usuario -> {
