@@ -128,7 +128,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edad_sexo"
                 android:layout_centerHorizontal="true"
-                android:background=""
                 android:text="Me gusta la inteligencia artificial y salir con sofia"
                 android:textAlignment="center"
                 android:textColor="@color/white"

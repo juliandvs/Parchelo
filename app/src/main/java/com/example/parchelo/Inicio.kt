@@ -53,7 +53,7 @@ class Inicio : Fragment() {
                 )
                 //Se verifica que el usuario este dentro de la base de datos
                 if(usuario != null){
-                    findNavController().navigate(R.id.action_inicio_to_menu)
+                    findNavController().navigate(R.id.action_inicio_to_principal)
                 }else{
                     Toast.makeText(requireContext(), "Usuario y/o contraseña no existe.", Toast.LENGTH_LONG).show()
                 }

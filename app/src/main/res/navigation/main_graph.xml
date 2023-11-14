@@ -9,11 +9,7 @@
         android:id="@+id/registro"
         android:name="com.example.parchelo.Registro"
         android:label="fragment_registro"
-        tools:layout="@layout/fragment_registro" >
-        <action
-            android:id="@+id/action_registro_to_menu"
-            app:destination="@id/menu" />
-    </fragment>
+        tools:layout="@layout/fragment_registro" />
     <fragment
         android:id="@+id/inicio"
         android:name="com.example.parchelo.Inicio"
@@ -23,17 +19,20 @@
             android:id="@+id/action_inicio_to_registro"
             app:destination="@id/registro" />
         <action
-            android:id="@+id/action_inicio_to_menu"
-            app:destination="@id/menu" />
-    </fragment>
-    <fragment
-        android:id="@+id/menu"
-        android:name="com.example.parchelo.menu"
-        android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" >
-        <action
-            android:id="@+id/action_menu_to_perfil"
+            android:id="@+id/action_inicio_to_perfil"
             app:destination="@id/perfil" />
+        <action
+            android:id="@+id/action_inicio_to_chat2"
+            app:destination="@id/chat" />
+        <action
+            android:id="@+id/action_inicio_to_crear"
+            app:destination="@id/crear" />
+        <action
+            android:id="@+id/action_inicio_to_guardados"
+            app:destination="@id/guardados" />
+        <action
+            android:id="@+id/action_inicio_to_principal"
+            app:destination="@id/principal" />
     </fragment>
     <fragment
         android:id="@+id/principal"
@@ -41,29 +40,90 @@
         android:label="fragment_principal"
         tools:layout="@layout/fragment_principal" >
         <action
-            android:id="@+id/action_principal_to_evento"
-            app:destination="@id/evento" />
+            android:id="@+id/action_principal_to_guardados"
+            app:destination="@id/guardados" />
+        <action
+            android:id="@+id/action_principal_to_crear"
+            app:destination="@id/crear" />
+        <action
+            android:id="@+id/action_principal_to_chat"
+            app:destination="@id/chat" />
+        <action
+            android:id="@+id/action_principal_to_perfil"
+            app:destination="@id/perfil" />
     </fragment>
     <fragment
         android:id="@+id/guardados"
         android:name="com.example.parchelo.guardados"
         android:label="fragment_guardados"
-        tools:layout="@layout/fragment_guardados" />
+        tools:layout="@layout/fragment_guardados" >
+        <action
+            android:id="@+id/action_guardados_to_crear"
+            app:destination="@id/crear" />
+        <action
+            android:id="@+id/action_guardados_to_chat"
+            app:destination="@id/chat" />
+        <action
+            android:id="@+id/action_guardados_to_perfil"
+            app:destination="@id/perfil" />
+        <action
+            android:id="@+id/action_guardados_to_principal"
+            app:destination="@id/principal" />
+    </fragment>
     <fragment
         android:id="@+id/crear"
         android:name="com.example.parchelo.Crear"
         android:label="fragment_crear"
-        tools:layout="@layout/fragment_crear" />
+        tools:layout="@layout/fragment_crear" >
+        <action
+            android:id="@+id/action_crear_to_chat"
+            app:destination="@id/chat" />
+        <action
+            android:id="@+id/action_crear_to_perfil"
+            app:destination="@id/perfil" />
+        <action
+            android:id="@+id/action_crear_to_guardados"
+            app:destination="@id/guardados" />
+        <action
+            android:id="@+id/action_crear_to_principal"
+            app:destination="@id/principal" />
+    </fragment>
     <fragment
         android:id="@+id/chat"
         android:name="com.example.parchelo.chat"
         android:label="fragment_chat"
-        tools:layout="@layout/fragment_chat" />
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chat_to_perfil"
+            app:destination="@id/perfil" />
+        <action
+            android:id="@+id/action_chat_to_crear"
+            app:destination="@id/crear" />
+        <action
+            android:id="@+id/action_chat_to_guardados"
+            app:destination="@id/guardados" />
+        <action
+            android:id="@+id/action_chat_to_principal"
+            app:destination="@id/principal" />
+    </fragment>
     <fragment
         android:id="@+id/perfil"
         android:name="com.example.parchelo.Perfil"
         android:label="fragment_perfil"
-        tools:layout="@layout/fragment_perfil" />
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_perfil_to_chat"
+            app:destination="@id/chat" />
+        <action
+            android:id="@+id/action_perfil_to_crear"
+            app:destination="@id/crear" />
+        <action
+            android:id="@+id/action_perfil_to_guardados"
+            app:destination="@id/guardados" />
+        <action
+            android:id="@+id/action_perfil_to_principal"
+            app:destination="@id/principal" />
+    </fragment>
     <fragment
         android:id="@+id/evento"
         android:name="com.example.parchelo.Evento"
