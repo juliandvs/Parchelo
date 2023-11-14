@@ -45,7 +45,9 @@
             app:destination="@id/guardados" />
         <action
             android:id="@+id/action_principal_to_crear"
-            app:destination="@id/crear" />
+            app:destination="@id/crear"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_principal_to_chat"
             app:destination="@id/chat" />
@@ -74,7 +76,7 @@
             android:id="@+id/action_guardados_to_principal"
             app:destination="@id/principal" />
     </fragment>
-    <fragment
+    <dialog
         android:id="@+id/crear"
         android:name="com.example.parchelo.Crear"
         android:label="fragment_crear"
@@ -91,7 +93,7 @@
         <action
             android:id="@+id/action_crear_to_principal"
             app:destination="@id/principal" />
-    </fragment>
+    </dialog>
     <fragment
         android:id="@+id/chat"
         android:name="com.example.parchelo.chat"

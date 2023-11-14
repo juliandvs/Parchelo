@@ -48,7 +48,7 @@ class Perfil : Fragment() {
                     true
                 }
                 R.id.crea -> {
-                    findNavController().navigate(R.id.action_perfil_to_guardados)
+                    findNavController().navigate(R.id.action_perfil_to_crear)
                     true
                 }
                 R.id.chatea -> {

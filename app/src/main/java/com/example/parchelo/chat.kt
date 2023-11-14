@@ -37,7 +37,7 @@ class chat : Fragment() {
                     true
                 }
                 R.id.crea -> {
-                    findNavController().navigate(R.id.action_chat_to_guardados)
+                    findNavController().navigate(R.id.action_chat_to_crear)
                     true
                 }
                 R.id.chatea -> {

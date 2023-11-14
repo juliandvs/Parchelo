@@ -1,16 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Crear">
+    android:background="@drawable/dialog_bg"
+    android:backgroundTint="@color/principal">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="25sp"
-        android:text="CREA" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/titulo_sheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titulo evento"
+            android:textSize="20dp"
+            android:textColor="@color/white" />
+
+
+        <EditText
+
+            android:id="@+id/editar_titulo"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_toEndOf="@+id/titulo_sheet"
+            android:background="@drawable/bordes"
+            android:minHeight="48dp"
+            android:text="Titulo evento"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/programacion_sheet"
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titulo_sheet"
+            android:textSize="20dp"
+            android:text="Programacion"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/editar_programacion"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editar_titulo"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:layout_toEndOf="@+id/titulo_sheet"
+            android:background="@drawable/bordes"
+            android:minHeight="48dp"
+            android:text="Titulo evento"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/descrpcion_sheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/programacion_sheet"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Titulo evento"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/editar_descripcion"
+            android:layout_width="500dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/descrpcion_sheet"
+            android:layout_marginStart="62dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/bordes"
+            android:minHeight="60dp"
+            android:text="Titulo evento"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/integrantes_max_sheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editar_descripcion"
+            android:layout_marginTop="30dp"
+            android:text="Integrantes maximos"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editar_descripcion"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/integrantes_max_sheet"
+            android:background="@drawable/bordes"
+            android:ems="10"
+            android:hint=">"
+            android:inputType="number"
+            android:minHeight="48dp" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="Crear"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/editTextNumber"
+            android:textColor="@color/principal"
+            />
+    </RelativeLayout>
+</LinearLayout>

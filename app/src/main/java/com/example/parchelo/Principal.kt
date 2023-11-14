@@ -65,7 +65,6 @@ class Principal : Fragment() {
         return root
     }
 
-
     private fun initRecyclerView(){
         binding.recycler.layoutManager = LinearLayoutManager(requireContext())
         binding.recycler.adapter = eventoAdapter(Provedor.eventos,{onItemselected(it)})
