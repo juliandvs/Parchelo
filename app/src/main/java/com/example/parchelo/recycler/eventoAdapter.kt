@@ -1,5 +1,6 @@
 package com.example.parchelo.recycler
 
+import android.content.DialogInterface.OnClickListener
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +13,7 @@ import com.example.parchelo.R
 
 
 
-class eventoAdapter(private val eventoList: List<Evento>): RecyclerView.Adapter<eventoAdapter.eventoHolder>() {
+class eventoAdapter(private val eventoList: List<Evento>, private val onClickListener:(Evento) -> Unit): RecyclerView.Adapter<eventoAdapter.eventoHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): eventoHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.carta,parent,false)
@@ -25,7 +26,7 @@ class eventoAdapter(private val eventoList: List<Evento>): RecyclerView.Adapter<
 
     override fun onBindViewHolder(holder: eventoHolder, position: Int) {
         val item = eventoList[position]
-        holder.render(item)
+        holder.render(item, onClickListener)
     }
 
     inner class eventoHolder(View : View): RecyclerView.ViewHolder(View){
@@ -34,11 +35,11 @@ class eventoAdapter(private val eventoList: List<Evento>): RecyclerView.Adapter<
         var lugar = View.findViewById<TextView>(R.id.lugar_evento)
         var foto = View.findViewById<ImageView>(R.id.img_evento)
 
-        fun render(model : Evento) {
+        fun render(model : Evento, onClickListener:(Evento) -> Unit) {
             titulo.text = model.titulo
             fecha.text = model.fecha
             lugar.text = model.lugar
-            foto.setOnClickListener { Toast.makeText(foto.context, model.titulo, Toast.LENGTH_SHORT).show() }
+            foto.setOnClickListener { onClickListener(model)}
         }
     }
 }

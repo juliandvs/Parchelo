@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.navigation.fragment.findNavController
-import com.example.parchelo.databinding.FragmentChatBinding
+import androidx.navigation.fragment.navArgs
 import com.example.parchelo.databinding.FragmentPerfilBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -26,6 +26,7 @@ class Perfil : Fragment() {
 
         bar = requireActivity().findViewById(R.id.bottomNavBar)
         bar.isGone = false
+
 
         bar.setOnItemSelectedListener {menuItem ->
             when (menuItem.itemId){

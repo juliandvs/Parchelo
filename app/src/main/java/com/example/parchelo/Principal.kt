@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.parchelo.databinding.FragmentInicioBinding
 import com.example.parchelo.databinding.FragmentPrincipalBinding
+import com.example.parchelo.recycler.Evento
 import com.example.parchelo.recycler.Provedor
 import com.example.parchelo.recycler.eventoAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -20,6 +22,10 @@ class Principal : Fragment() {
 
     private lateinit var binding: FragmentPrincipalBinding
     private lateinit var bar: BottomNavigationView
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -62,7 +68,12 @@ class Principal : Fragment() {
 
     private fun initRecyclerView(){
         binding.recycler.layoutManager = LinearLayoutManager(requireContext())
-        binding.recycler.adapter = eventoAdapter(Provedor.eventos)
+        binding.recycler.adapter = eventoAdapter(Provedor.eventos,{onItemselected(it)})
+    }
+
+    fun onItemselected(evento: Evento){
+        findNavController().navigate(R.id.action_principal_to_evento)
+        Toast.makeText(requireContext(),evento.titulo,Toast.LENGTH_SHORT).show()
     }
 
 
