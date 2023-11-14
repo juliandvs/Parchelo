@@ -26,7 +26,6 @@ class Inicio : Fragment() {
     private lateinit var UsuarioDao: UsuarioDao
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Create the userDao from Database
         UsuarioDao = bd.UsuarioDao()
     }
 

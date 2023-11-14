@@ -10,11 +10,10 @@ import androidx.navigation.fragment.findNavController
 import com.example.parchelo.databinding.FragmentGuardadosBinding
 import com.example.parchelo.databinding.FragmentPrincipalBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
-private lateinit var binding: FragmentGuardadosBinding
-private lateinit var bar: BottomNavigationView
 class guardados : Fragment() {
 
+    private lateinit var binding: FragmentGuardadosBinding
+    private lateinit var bar: BottomNavigationView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

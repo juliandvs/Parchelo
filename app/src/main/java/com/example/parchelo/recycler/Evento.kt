@@ -1,3 +1,10 @@
 package com.example.parchelo.recycler
 
-data class Evento (val titulo : String, val fecha : String, val lugar : String) {}
+/**
+ * Clase donde se almacenara la información del evento
+ */
+data class Evento (
+    val titulo : String,
+    val fecha : String,
+    val lugar : String
+)

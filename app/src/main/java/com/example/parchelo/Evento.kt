@@ -13,10 +13,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Evento : Fragment() {
 
-
     private val args: EventoArgs by navArgs()
     private lateinit var binding : FragmentEventoBinding
     private lateinit var bar: BottomNavigationView
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -1,5 +1,8 @@
 package com.example.parchelo.recycler
 
+/**
+ * Clase que tiene como funcion proveernos la información de varios eventos
+ */
 class Provedor {
     companion object{
         val eventos = listOf<Evento>(

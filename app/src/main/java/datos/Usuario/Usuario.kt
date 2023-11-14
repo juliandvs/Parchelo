@@ -4,6 +4,11 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+/**
+ * Entidad : Usuario
+ *
+ * Atributos : nombre, apellido, edad, nombre_usuario, email, contraseña*
+ */
 @Entity(tableName = "Usuario")
 data class Usuario(
     @PrimaryKey(autoGenerate = true) val id: Int,

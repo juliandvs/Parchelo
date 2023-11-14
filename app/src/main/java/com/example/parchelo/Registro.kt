@@ -17,30 +17,20 @@ import kotlinx.coroutines.launch
 class Registro : Fragment() {
 
     private lateinit var binding: FragmentRegistroBinding
+    private lateinit var UsuarioDao: UsuarioDao
 
     // Se crea una instacia de nuestra base de datos
     private val bd: BaseDeDatos by lazy {
         BaseDeDatos.getDatabase(requireActivity().baseContext)
     }
 
-    private lateinit var UsuarioDao: UsuarioDao
 
-    /**
-     * OnCreate : se hace el llamado a esta función cuando la actividad/Fragment
-     * esta siendo creada por primera vez o cuando esta siendo recreada
-     * después de haber sido destruida.
-     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Create the userDao from Database
         UsuarioDao = bd.UsuarioDao()
     }
 
-    /**
-     * OnCreateView: Se utiliza para inflar y configurar la vista del fragment.
-     * Este metodo se llama cuando el fragmento está siendo creado y necesita proporcionar
-     * su interfaz de usuario.
-     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -50,10 +40,6 @@ class Registro : Fragment() {
         return root
     }
 
-    /**
-     * OnViewCreated : Se llama despues de llamar al metodo OnCreateView, en este punto,
-     * la vista ya ha sido creada, y se puede realizar operaciones adicionales en la vista (Componentes de Interfaz, Adaptadore, etc)
-     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -69,7 +55,6 @@ class Registro : Fragment() {
 
                 if(nombre.isEmpty() || apellido.isEmpty() || nombreUsuario.isEmpty() ||
                     email.isEmpty() || contrasena.isEmpty() || contrasenaValidacion.isEmpty()){ //Se verifica que todos los campos esten completos
-                    //TODO poner asteriscos a todos los campos o los que sean obligatorios
                     Toast.makeText(requireContext(), "Por favor llene todos los campos", Toast.LENGTH_SHORT).show()
                 }else if(UsuarioDao.verificarUsuario(nombreUsuario)) { //Se verifica que el usuario no exista en la base de datos
                     Toast.makeText(requireContext(), "El nombre de usuario ya esta en uso", Toast.LENGTH_SHORT).show()

@@ -31,8 +31,8 @@
             android:layout_toEndOf="@+id/titulo_sheet"
             android:background="@drawable/bordes"
             android:minHeight="48dp"
-            android:text="Titulo evento"
-            android:textColor="@color/white" />
+            android:text=""
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/programacion_sheet"
@@ -55,8 +55,8 @@
             android:layout_toEndOf="@+id/titulo_sheet"
             android:background="@drawable/bordes"
             android:minHeight="48dp"
-            android:text="Titulo evento"
-            android:textColor="@color/white" />
+            android:text=""
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/descrpcion_sheet"
@@ -65,7 +65,7 @@
             android:layout_below="@+id/programacion_sheet"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
-            android:text="Titulo evento"
+            android:text="Descripcion"
             android:textColor="@color/white"
             android:textSize="20dp" />
 
@@ -79,8 +79,8 @@
             android:layout_marginEnd="50dp"
             android:background="@drawable/bordes"
             android:minHeight="60dp"
-            android:text="Titulo evento"
-            android:textColor="@color/white" />
+            android:text=""
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/integrantes_max_sheet"
@@ -107,6 +107,7 @@
             android:minHeight="48dp" />
 
         <Button
+            android:id="@+id/btnCrear"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
