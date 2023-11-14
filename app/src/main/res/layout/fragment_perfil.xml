@@ -6,36 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".Perfil">
 
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imgFotoPerfil"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="72dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/btnEditarFotoPerfil"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="120dp"
-        android:src="@android:drawable/ic_menu_edit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/boton_circular"/>
-
-    <TextView
-        android:id="@+id/txt_nombre_edad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="43dp"
-        android:text="Nombre, edad"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgFotoPerfil" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/principal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgFotoPerfil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="72dp"
+            />
+
+        <ImageButton
+            android:id="@+id/btnEditarFotoPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="120dp"
+            android:background="@drawable/boton_circular"
+            android:src="@android:drawable/ic_menu_edit"
+            />
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/txt_nombre_edad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:text="Nombre, edad"
+            />
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/txt_sexo"
